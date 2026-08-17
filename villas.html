@@ -24,17 +24,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="brand">Vue Mer<small>Chambres d'hôtes &amp; Villa — Carantec</small></a>
+    <a href="index.html" class="brand">Vue Mer<small>Villa &amp; Chambres d'hôtes — Carantec</small></a>
     <nav class="nav">
       <a href="index.html">Accueil</a>
-      <a href="chambres.html">Nos chambres</a>
       <a href="villas.html" class="is-active">Notre villa</a>
+      <a href="chambres.html">Nos chambres</a>
       <a href="disponibilites.html">Disponibilités</a>
       <a href="ou-manger.html">Où manger</a>
       <a href="photos.html">Photos</a>
@@ -86,7 +86,10 @@
           <li>Piscine chauffée 4x8 m</li>
           <li>Location à la semaine</li>
         </ul>
-        <a href="contact.html" class="btn btn--dark">Demander un tarif</a>
+        <div class="hero-actions">
+          <a href="disponibilites.html" class="btn btn--primary">Vérifier les disponibilités</a>
+          <a href="contact.html" class="btn btn--dark">Demander un tarif</a>
+        </div>
       </div>
     </div>
   </div>
@@ -98,6 +101,10 @@
       <span class="eyebrow">Bon à savoir</span>
       <h2>La piscine chauffée &amp; le chauffage hors-saison</h2>
       <p>La piscine est chauffée en saison estivale. Un chauffage supplémentaire peut être activé du 15 octobre au 1er avril, sur demande, moyennant un supplément — n'hésitez pas à nous consulter pour organiser votre séjour hors-saison.</p>
+    </div>
+    <div class="gallery reveal" style="max-width:900px;margin:0 auto;">
+      <img src="https://static.wixstatic.com/media/7abbdd_35df503e03874366a363bbe651ad8a9c~mv2.jpg/v1/fill/w_700,h_500,al_c,q_85/img.jpg" data-full="https://static.wixstatic.com/media/7abbdd_35df503e03874366a363bbe651ad8a9c~mv2.jpg" alt="Piscine chauffée de la villa" loading="lazy">
+      <img src="https://static.wixstatic.com/media/7abbdd_956c5c8ea7f64dbeabfbe8b3cb4767a9~mv2_d_3264_2448_s_4_2.jpg/v1/fill/w_700,h_500,al_c,q_85/img.jpg" data-full="https://static.wixstatic.com/media/7abbdd_956c5c8ea7f64dbeabfbe8b3cb4767a9~mv2_d_3264_2448_s_4_2.jpg" alt="Piscine chauffée, vue d'ensemble" loading="lazy">
     </div>
   </div>
 </section>
@@ -121,8 +128,8 @@
       <div>
         <h4>Navigation</h4>
         <ul>
-          <li><a href="chambres.html">Nos chambres</a></li>
           <li><a href="villas.html">Notre villa</a></li>
+          <li><a href="chambres.html">Nos chambres</a></li>
           <li><a href="disponibilites.html">Disponibilités</a></li>
           <li><a href="ou-manger.html">Où manger</a></li>
           <li><a href="photos.html">Photos</a></li>
@@ -145,6 +152,6 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=5"></script>
 </body>
 </html>

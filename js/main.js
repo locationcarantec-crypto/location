@@ -8,6 +8,9 @@ const I18N_MAIN = {
     sending: "Envoi en cours…",
     success: "Merci ! Votre demande a bien été envoyée, nous revenons vers vous rapidement.",
     error: "Une erreur est survenue. Vous pouvez nous appeler au 06 63 12 99 45 ou réessayer.",
+    callLabel: "Appelez-nous : 06 63 12 99 45",
+    whatsappLabel: "Contactez-nous sur WhatsApp",
+    whatsappMessage: "Bonjour, je vous contacte au sujet d'un séjour à Vue Mer Carantec.",
   },
   en: {
     captchaQuestion: (a, b) => "Anti-spam: what is " + a + " + " + b + "?",
@@ -15,6 +18,9 @@ const I18N_MAIN = {
     sending: "Sending…",
     success: "Thank you! Your request has been sent, we'll get back to you shortly.",
     error: "Something went wrong. You can call us at +33 6 63 12 99 45 or try again.",
+    callLabel: "Call us: +33 6 63 12 99 45",
+    whatsappLabel: "Contact us on WhatsApp",
+    whatsappMessage: "Hello, I'm getting in touch about a stay at Vue Mer Carantec.",
   },
   de: {
     captchaQuestion: (a, b) => "Anti-Spam: Wie viel ist " + a + " + " + b + "?",
@@ -22,6 +28,9 @@ const I18N_MAIN = {
     sending: "Wird gesendet…",
     success: "Vielen Dank! Ihre Anfrage wurde gesendet, wir melden uns in Kürze bei Ihnen.",
     error: "Ein Fehler ist aufgetreten. Sie können uns unter +33 6 63 12 99 45 anrufen oder es erneut versuchen.",
+    callLabel: "Rufen Sie uns an: +33 6 63 12 99 45",
+    whatsappLabel: "Kontaktieren Sie uns über WhatsApp",
+    whatsappMessage: "Hallo, ich melde mich wegen eines Aufenthalts bei Vue Mer Carantec.",
   },
   it: {
     captchaQuestion: (a, b) => "Anti-spam: quanto fa " + a + " + " + b + "?",
@@ -29,6 +38,9 @@ const I18N_MAIN = {
     sending: "Invio in corso…",
     success: "Grazie! La tua richiesta è stata inviata, ti risponderemo a breve.",
     error: "Si è verificato un errore. Puoi chiamarci al +33 6 63 12 99 45 o riprovare.",
+    callLabel: "Chiamaci: +33 6 63 12 99 45",
+    whatsappLabel: "Contattaci su WhatsApp",
+    whatsappMessage: "Ciao, vi contatto per un soggiorno a Vue Mer Carantec.",
   },
   es: {
     captchaQuestion: (a, b) => "Antispam: ¿cuánto es " + a + " + " + b + "?",
@@ -36,6 +48,9 @@ const I18N_MAIN = {
     sending: "Enviando…",
     success: "¡Gracias! Tu solicitud ha sido enviada, te responderemos en breve.",
     error: "Se produjo un error. Puedes llamarnos al +33 6 63 12 99 45 o intentarlo de nuevo.",
+    callLabel: "Llámanos: +33 6 63 12 99 45",
+    whatsappLabel: "Contáctanos por WhatsApp",
+    whatsappMessage: "Hola, os escribo por una estancia en Vue Mer Carantec.",
   },
 };
 
@@ -212,4 +227,18 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
+
+  // Bouton de contact flottant permanent (appel + WhatsApp), présent sur
+  // toutes les pages et toutes les langues via ce script partagé.
+  const floating = document.createElement("div");
+  floating.className = "floating-contact";
+  floating.innerHTML = `
+    <a class="floating-contact__btn floating-contact__btn--whatsapp" href="https://wa.me/33663129945?text=${encodeURIComponent(t.whatsappMessage)}" target="_blank" rel="noopener" aria-label="${t.whatsappLabel}" title="${t.whatsappLabel}">
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 2.67C8.7 2.67 2.75 8.61 2.75 15.96c0 2.45.66 4.75 1.8 6.73L2.67 29.33l6.82-1.79a13.2 13.2 0 0 0 6.55 1.75h.01c7.34 0 13.29-5.95 13.29-13.29 0-3.55-1.38-6.89-3.89-9.4a13.2 13.2 0 0 0-9.4-3.93zm0 2.42c2.9 0 5.63 1.13 7.68 3.19a10.82 10.82 0 0 1 3.18 7.68c0 6-4.88 10.87-10.87 10.87a10.9 10.9 0 0 1-5.55-1.52l-.4-.24-4.05 1.06 1.08-3.95-.26-.41a10.83 10.83 0 0 1-1.68-5.81c0-6 4.88-10.87 10.87-10.87zm-5.98 6.03c-.22 0-.58.08-.89.42-.3.34-1.16 1.13-1.16 2.77 0 1.63 1.19 3.2 1.36 3.43.17.22 2.32 3.62 5.72 4.93 2.83 1.1 3.41.88 4.02.83.61-.06 1.98-.81 2.26-1.6.28-.78.28-1.45.2-1.6-.09-.14-.31-.22-.65-.39-.34-.17-1.98-.98-2.29-1.09-.31-.11-.53-.17-.76.17-.22.34-.87 1.09-1.06 1.32-.2.22-.39.25-.73.08-.34-.17-1.42-.52-2.71-1.67-1-.9-1.68-2-1.87-2.34-.2-.34-.02-.52.15-.69.15-.15.34-.39.5-.59.17-.2.22-.34.34-.56.11-.22.06-.42-.03-.59-.08-.17-.75-1.85-1.06-2.52-.27-.6-.55-.56-.76-.57-.2-.01-.42-.01-.63-.01z"/></svg>
+    </a>
+    <a class="floating-contact__btn floating-contact__btn--call" href="tel:+33663129945" aria-label="${t.callLabel}" title="${t.callLabel}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  `;
+  document.body.appendChild(floating);
 });

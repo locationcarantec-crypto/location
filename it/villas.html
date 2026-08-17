@@ -24,17 +24,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="stylesheet" href="../css/style.css?v=4">
+<link rel="stylesheet" href="../css/style.css?v=5">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="brand">Vue Mer<small>Camere e Villa — Carantec</small></a>
+    <a href="index.html" class="brand">Vue Mer<small>Villa e Camere — Carantec</small></a>
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="chambres.html">La Camera</a>
       <a href="villas.html" class="is-active">La Villa</a>
+      <a href="chambres.html">La Camera</a>
       <a href="disponibilites.html">Disponibilità</a>
       <a href="ou-manger.html">Dove Mangiare</a>
       <a href="photos.html">Foto</a>
@@ -86,7 +86,10 @@
           <li>Piscina riscaldata 4x8 m</li>
           <li>Affitto settimanale</li>
         </ul>
-        <a href="contact.html" class="btn btn--dark">Richiedi un Preventivo</a>
+        <div class="hero-actions">
+          <a href="disponibilites.html" class="btn btn--primary">Verifica Disponibilità</a>
+          <a href="contact.html" class="btn btn--dark">Richiedi un Preventivo</a>
+        </div>
       </div>
     </div>
   </div>
@@ -98,6 +101,10 @@
       <span class="eyebrow">Da sapere</span>
       <h2>La piscina riscaldata &amp; il riscaldamento fuori stagione</h2>
       <p>La piscina è riscaldata durante la stagione estiva. Un riscaldamento supplementare può essere attivato dal 15 ottobre al 1° aprile, su richiesta, con un supplemento — non esitate a contattarci per organizzare il vostro soggiorno fuori stagione.</p>
+    </div>
+    <div class="gallery reveal" style="max-width:900px;margin:0 auto;">
+      <img src="https://static.wixstatic.com/media/7abbdd_35df503e03874366a363bbe651ad8a9c~mv2.jpg/v1/fill/w_700,h_500,al_c,q_85/img.jpg" data-full="https://static.wixstatic.com/media/7abbdd_35df503e03874366a363bbe651ad8a9c~mv2.jpg" alt="Piscina riscaldata della villa" loading="lazy">
+      <img src="https://static.wixstatic.com/media/7abbdd_956c5c8ea7f64dbeabfbe8b3cb4767a9~mv2_d_3264_2448_s_4_2.jpg/v1/fill/w_700,h_500,al_c,q_85/img.jpg" data-full="https://static.wixstatic.com/media/7abbdd_956c5c8ea7f64dbeabfbe8b3cb4767a9~mv2_d_3264_2448_s_4_2.jpg" alt="Piscina riscaldata, vista d'insieme" loading="lazy">
     </div>
   </div>
 </section>
@@ -121,8 +128,8 @@
       <div>
         <h4>Navigazione</h4>
         <ul>
-          <li><a href="chambres.html">La Camera</a></li>
           <li><a href="villas.html">La Villa</a></li>
+          <li><a href="chambres.html">La Camera</a></li>
           <li><a href="disponibilites.html">Disponibilità</a></li>
           <li><a href="ou-manger.html">Dove Mangiare</a></li>
           <li><a href="photos.html">Foto</a></li>
@@ -145,6 +152,6 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="../js/main.js?v=4"></script>
+<script src="../js/main.js?v=5"></script>
 </body>
 </html>
