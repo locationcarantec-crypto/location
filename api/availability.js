@@ -3,6 +3,12 @@
 // périodes "occupées" (un événement = une réservation) et renvoie une
 // liste simple de plages de dates au format JSON.
 //
+// Un seul agenda Google gère tout : la Villa ET les chambres individuelles.
+// Dès qu'une chambre individuelle est réservée (par email), créez aussi un
+// événement bloquant dans cet agenda pour ces dates, afin que la Villa
+// apparaisse bien indisponible sur le site (règle : chambre réservée ⇒
+// Villa indisponible pour ces dates).
+//
 // L'URL secrète du calendrier ne doit JAMAIS être exposée côté client :
 // elle est lue depuis une variable d'environnement Vercel.
 //
