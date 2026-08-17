@@ -173,6 +173,34 @@ p {
   color: var(--color-white);
 }
 
+.btn--sea {
+  background: var(--color-sea-deep);
+  color: var(--color-white);
+}
+
+.btn--sea:hover {
+  background: var(--color-sea);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn--whatsapp {
+  background: #25d366;
+  color: var(--color-white);
+}
+
+.btn--whatsapp:hover {
+  background: #1ebc59;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* ---------- Header / Nav ---------- */
 .site-header {
   position: fixed;
@@ -199,13 +227,14 @@ p {
 
 .brand {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-white);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.15;
+  max-width: 310px;
 }
 
 .brand small {
@@ -896,7 +925,13 @@ form.contact-form {
 .site-footer {
   background: var(--color-sea-deep);
   color: rgba(255,255,255,0.75);
-  padding: 60px 0 28px;
+  padding: 60px 0 0;
+}
+
+.footer-fade {
+  height: 36px;
+  margin-top: 28px;
+  background: linear-gradient(to bottom, var(--color-sea-deep), var(--color-sand-light));
 }
 
 .footer-grid {
@@ -929,6 +964,7 @@ form.contact-form {
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.12);
   padding-top: 24px;
+  padding-bottom: 28px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
