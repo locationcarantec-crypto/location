@@ -24,13 +24,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="stylesheet" href="../css/style.css?v=5">
+<link rel="stylesheet" href="../css/style.css?v=7">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="brand">Villa &amp; Guest House — Carantec<small>Sea View · Heated Pool</small></a>
+    <a href="index.html" class="brand">Villa &amp; Guest House<br>Carantec<small>Sea View · Heated Pool</small></a>
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="villas.html">Our Villa</a>
@@ -153,10 +153,13 @@
 
 <footer class="site-footer">
   <div class="container">
+    <div class="footer-map">
+      <iframe src="https://www.google.com/maps?q=7+Impasse+de+Kerliezec,+29660+Carantec&output=embed" width="100%" height="260" style="border:0;display:block;filter:grayscale(0.15) contrast(1.05);" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Vue Mer, Carantec"></iframe>
+    </div>
     <div class="footer-grid">
       <div>
         <h4 style="font-family:'Playfair Display',serif;font-size:1.2rem;">Vue Mer</h4>
-        <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;max-width:280px;">Guest house and sea-view villa in Carantec, in the heart of the Bay of Morlaix, Finistère, Brittany.</p>
+        <p style="color:var(--color-text-muted);font-size:0.9rem;max-width:280px;">Guest house and sea-view villa in Carantec, in the heart of the Bay of Morlaix, Finistère, Brittany.</p>
       </div>
       <div>
         <h4>Navigation</h4>
@@ -177,15 +180,11 @@
         </ul>
       </div>
     </div>
-    <div style="border-radius:var(--radius-lg);overflow:hidden;margin-bottom:32px;">
-      <iframe src="https://www.google.com/maps?q=7+Impasse+de+Kerliezec,+29660+Carantec&output=embed" width="100%" height="260" style="border:0;display:block;filter:grayscale(0.15) contrast(1.05);" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Vue Mer, Carantec"></iframe>
-    </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Chambres d'hôtes Vue Mer — Carantec</span>
       <span>Website built with Claude</span>
     </div>
   </div>
-  <div class="footer-fade"></div>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

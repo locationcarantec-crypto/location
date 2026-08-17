@@ -141,6 +141,7 @@ p {
   transition: all var(--transition);
   border: 1.5px solid transparent;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .btn--primary {
@@ -199,6 +200,45 @@ p {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-white);
+  white-space: nowrap;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.contact-links a:hover {
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.contact-links a svg {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+.contact-links a.contact-links__whatsapp {
+  color: #3ddc84;
+}
+
+.contact-links a.contact-links__whatsapp:hover {
+  color: #25d366;
 }
 
 /* ---------- Header / Nav ---------- */
@@ -923,15 +963,16 @@ form.contact-form {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--color-sea-deep);
-  color: rgba(255,255,255,0.75);
-  padding: 60px 0 0;
+  background: var(--color-sand-light);
+  color: var(--color-text-muted);
+  padding: 48px 0 28px;
 }
 
-.footer-fade {
-  height: 36px;
-  margin-top: 28px;
-  background: linear-gradient(to bottom, var(--color-sea-deep), var(--color-sand-light));
+.footer-map {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 48px;
 }
 
 .footer-grid {
@@ -942,7 +983,7 @@ form.contact-form {
 }
 
 .footer-grid h4 {
-  color: var(--color-white);
+  color: var(--color-sea-deep);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   margin-bottom: 16px;
@@ -957,20 +998,24 @@ form.contact-form {
   font-size: 0.9rem;
 }
 
+.footer-grid a {
+  color: var(--color-text-muted);
+}
+
 .footer-grid a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.12);
+  border-top: 1px solid var(--color-border);
   padding-top: 24px;
-  padding-bottom: 28px;
+  padding-bottom: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.55);
+  color: var(--color-text-muted);
 }
 
 /* ---------- Responsive ---------- */

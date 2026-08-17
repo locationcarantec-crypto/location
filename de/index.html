@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="stylesheet" href="../css/style.css?v=5">
+<link rel="stylesheet" href="../css/style.css?v=7">
 
 <script type="application/ld+json">
 {
@@ -57,7 +57,7 @@
 
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="brand">Villa &amp; Gästezimmer — Carantec<small>Meerblick · Beheizter Pool</small></a>
+    <a href="index.html" class="brand">Villa &amp; Gästezimmer<br>Carantec<small>Meerblick · Beheizter Pool</small></a>
     <nav class="nav">
       <a href="index.html" class="is-active">Startseite</a>
       <a href="villas.html">Unsere Villa</a>
@@ -154,8 +154,9 @@
         <h2>Die Villa, exklusiv für Familie oder Freunde</h2>
         <p>Das ganze Haus nur für Sie: 3 bis 4 Zimmer mit ebenso vielen Badezimmern, ein großzügiges, zum Meer hin offenes Wohnzimmer, eine große Terrasse und ein beheizter Pool von 4x8 Metern, wochenweise zu mieten.</p>
         <div class="hero-actions" style="margin-top:24px;">
-          <a href="disponibilites.html" class="btn btn--primary">Verfügbarkeit prüfen</a>
           <a href="villas.html" class="btn btn--dark">Villa entdecken</a>
+          <a href="disponibilites.html" class="btn btn--primary">Verfügbarkeit prüfen</a>
+          <a href="contact.html" class="btn btn--sea">Preis anfragen</a>
         </div>
       </div>
     </div>
@@ -175,8 +176,9 @@
         <h2>Zimmer Vue Mer, für 2 Personen</h2>
         <p>23 m² für Ihren Komfort durchdacht: Queen-Size-Bett 160x200, italienische Dusche, Doppelwaschbecken, separater Eingang und direkter Zugang zum Garten. Frühstück und Kurtaxe sind inbegriffen.</p>
         <div class="price-tag"><strong>110 €</strong><span>/ Nacht, Frühstück inbegriffen</span></div>
-        <div>
+        <div class="hero-actions" style="margin-top:24px;">
           <a href="chambres.html" class="btn btn--dark">Zimmerdetails ansehen</a>
+          <a href="contact.html" class="btn btn--primary">Kontaktieren Sie uns zur Buchung</a>
         </div>
       </div>
     </div>
@@ -211,10 +213,13 @@
 
 <footer class="site-footer">
   <div class="container">
+    <div class="footer-map">
+      <iframe src="https://www.google.com/maps?q=7+Impasse+de+Kerliezec,+29660+Carantec&output=embed" width="100%" height="260" style="border:0;display:block;filter:grayscale(0.15) contrast(1.05);" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Vue Mer, Carantec"></iframe>
+    </div>
     <div class="footer-grid">
       <div>
         <h4 style="font-family:'Playfair Display',serif;font-size:1.2rem;">Vue Mer</h4>
-        <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;max-width:280px;">Gästezimmer und Villa mit Meerblick in Carantec, mitten in der Bucht von Morlaix, Finistère.</p>
+        <p style="color:var(--color-text-muted);font-size:0.9rem;max-width:280px;">Gästezimmer und Villa mit Meerblick in Carantec, mitten in der Bucht von Morlaix, Finistère.</p>
       </div>
       <div>
         <h4>Navigation</h4>
@@ -235,15 +240,11 @@
         </ul>
       </div>
     </div>
-    <div style="border-radius:var(--radius-lg);overflow:hidden;margin-bottom:32px;">
-      <iframe src="https://www.google.com/maps?q=7+Impasse+de+Kerliezec,+29660+Carantec&output=embed" width="100%" height="260" style="border:0;display:block;filter:grayscale(0.15) contrast(1.05);" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Vue Mer, Carantec"></iframe>
-    </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Chambres d'hôtes Vue Mer — Carantec</span>
       <span>Website erstellt mit Claude</span>
     </div>
   </div>
-  <div class="footer-fade"></div>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
