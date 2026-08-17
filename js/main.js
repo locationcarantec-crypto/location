@@ -228,6 +228,21 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
+  // Onglets de la galerie photo (Villa / Chambres / Piscine)
+  const galleryTabs = document.querySelectorAll(".gallery-tab");
+  if (galleryTabs.length) {
+    const panels = document.querySelectorAll(".gallery-panel");
+    galleryTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.tabTarget;
+        galleryTabs.forEach((t) => t.classList.toggle("is-active", t === tab));
+        panels.forEach((panel) => {
+          panel.hidden = panel.dataset.tabPanel !== target;
+        });
+      });
+    });
+  }
+
   // Bouton de contact flottant permanent (appel + WhatsApp), présent sur
   // toutes les pages et toutes les langues via ce script partagé.
   const floating = document.createElement("div");

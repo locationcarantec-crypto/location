@@ -795,6 +795,40 @@ body.not-home .nav-toggle span {
   column-gap: 14px;
 }
 
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 40px;
+}
+
+.gallery-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.gallery-tab:hover {
+  border-color: var(--color-accent);
+  color: var(--color-sea-deep);
+}
+
+.gallery-tab.is-active {
+  background: var(--color-sea-deep);
+  border-color: var(--color-sea-deep);
+  color: var(--color-white);
+}
+
 .gallery img {
   width: 100%;
   margin-bottom: 14px;
