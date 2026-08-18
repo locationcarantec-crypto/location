@@ -658,9 +658,8 @@ body.not-home .nav-toggle span {
 
 /* ---------- Amenity list ---------- */
 .amenities {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px 24px;
+  columns: 2;
+  column-gap: 28px;
   list-style: none;
   margin: 24px 0;
 }
@@ -671,6 +670,8 @@ body.not-home .nav-toggle span {
   gap: 10px;
   font-size: 0.95rem;
   color: var(--color-text);
+  break-inside: avoid;
+  margin-bottom: 14px;
 }
 
 .amenities li::before {
@@ -1293,6 +1294,10 @@ body.nav-locked {
 }
 
 @media (max-width: 520px) {
+  .amenities {
+    columns: 1;
+  }
+
   .avail-cal {
     padding: 20px 16px 20px;
   }
