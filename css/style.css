@@ -717,6 +717,11 @@ body.not-home .nav-toggle span {
   aspect-ratio: 1 / 2.02;
 }
 
+.detail-gallery--quad img:first-child {
+  grid-row: auto;
+  aspect-ratio: 1 / 1;
+}
+
 .price-tag {
   display: inline-flex;
   align-items: baseline;
