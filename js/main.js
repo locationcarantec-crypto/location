@@ -228,6 +228,26 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
+  // Suivi Google Analytics : clics tél/WhatsApp + envoi du formulaire de contact
+  if (typeof gtag === "function") {
+    document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        gtag("event", "phone_click", { link_url: link.getAttribute("href") });
+      });
+    });
+    document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        gtag("event", "whatsapp_click", { link_url: link.getAttribute("href") });
+      });
+    });
+    const contactForm = document.querySelector(".contact-form");
+    if (contactForm) {
+      contactForm.addEventListener("submit", () => {
+        gtag("event", "contact_form_submit");
+      });
+    }
+  }
+
   // Onglets de la galerie photo (Villa / Chambres / Piscine)
   const galleryTabs = document.querySelectorAll(".gallery-tab");
   if (galleryTabs.length) {
